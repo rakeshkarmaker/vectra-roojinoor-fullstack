@@ -14,6 +14,7 @@
   --primary-foreground: oklch(0.12 0 0);
   --brand-start: #00d5c7;
   --brand-end: #00b8d4;
+  --accent-secondary: #00b8d4;
   --brand-border: rgba(0, 213, 199, 0.2);
   --brand-glow: rgba(0, 213, 199, 0.4);
   --brand-glow-strong: rgba(0, 213, 199, 0.5);
@@ -59,6 +60,7 @@
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.08);
   --surface-deep-start: #020817;
+  --surface-deep-mid: #031225;
   --surface-deep-end: #031225;
   --surface-divider: rgba(255, 255, 255, 0.12);
   --text-on-dark-strong: rgba(255, 255, 255, 0.7);
@@ -174,14 +176,19 @@
   /* Custom */
   --color-brand-start: var(--brand-start);
   --color-brand-end: var(--brand-end);
+  --color-accent-secondary: var(--accent-secondary);
 
   --color-surface-deep-start: var(--surface-deep-start);
+  --color-surface-deep-mid: var(--surface-deep-mid);
   --color-surface-deep-end: var(--surface-deep-end);
 
   --color-glass-bg: var(--glass-bg);
   --color-glass-border: var(--glass-border);
 
   --color-navbar-bg: var(--navbar-bg);
+
+  --color-foreground-muted: var(--text-on-dark-muted);
+  --color-foreground-soft: var(--text-on-dark-soft);
 
   --color-neon-border: var(--neon-border);
   --color-neon-glow: var(--neon-glow);
