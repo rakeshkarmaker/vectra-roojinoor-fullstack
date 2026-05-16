@@ -1,30 +1,12 @@
-import { Link, Briefcase } from "lucide-react";
+"use client";
+
+import Link from "next/link";
+import { Briefcase } from "lucide-react";
 import Img from "next/image";
 import { IndustryStrip } from "../components/sections/industry-strip";
 import { motion } from "motion/react";
 
 export default function Home() {
-  const featuredJobs = [
-    {
-      title: "Optical Systems Engineer",
-      location: "London, UK",
-      type: "Full-time",
-      matchScore: 92,
-    },
-    {
-      title: "Aerospace Systems Lead",
-      location: "Stevenage, UK",
-      type: "Full-time",
-      matchScore: 88,
-    },
-    {
-      title: "Photonics Design Engineer",
-      location: "Bristol, UK",
-      type: "Contract",
-      matchScore: 85,
-    },
-  ];
-
   const features = [
     {
       icon: "🧠",
@@ -50,8 +32,8 @@ export default function Home() {
     <>
       <main className="pt-28">
         {/* Hero Section with Sidebar */}
-        <div className="min-h-screen bg-linear-to-b from-surface-deep-start via-surface-deep-mid to-surface-deep-end flex items-center">
-          <div className="max-w-7xl mx-auto w-full px-6 py-32 grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="min-h-[60vh] bg-linear-to-b from-surface-deep-start via-surface-deep-mid to-surface-deep-end flex items-center">
+          <div className="max-w-7xl mx-auto w-auto px-6 py-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
             {/* Main Content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -67,7 +49,7 @@ export default function Home() {
                   Engineering Talent.
                   <br />
                   Powering{" "}
-                  <span className="bg-gradient-to-r from-brand-start to-brand-end bg-clip-text text-transparent">
+                  <span className="bg-linear-to-r from-brand-start to-brand-end bg-clip-text text-transparent">
                     Innovation
                   </span>
                   .
@@ -93,109 +75,6 @@ export default function Home() {
                     <Briefcase className="w-5 h-5" />
                     <span>Hire Talent</span>
                   </Link>
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Right Sidebar */}
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="lg:col-span-1 lg:sticky lg:top-32 h-fit"
-            >
-              <div className="glass rounded-3xl p-8 space-y-8">
-                {/* Intro */}
-                <div>
-                  <h3 className="text-xl font-bold mb-3">Your next move.</h3>
-                  <p className="text-foreground-muted text-sm leading-relaxed">
-                    Upload your CV and discover your best opportunities.
-                  </p>
-                </div>
-
-                {/* CV Match Score */}
-                <div className="flex flex-col items-center">
-                  <p className="text-xs font-semibold text-foreground-muted mb-4 uppercase tracking-wide">
-                    AI CV Match Score
-                  </p>
-                  <div className="relative w-32 h-32 flex items-center justify-center">
-                    <svg className="w-32 h-32 -rotate-90" viewBox="0 0 120 120">
-                      <circle
-                        cx="60"
-                        cy="60"
-                        r="54"
-                        fill="none"
-                        stroke="var(--surface-divider)"
-                        strokeWidth="8"
-                      />
-                      <circle
-                        cx="60"
-                        cy="60"
-                        r="54"
-                        fill="none"
-                        stroke="var(--accent)"
-                        strokeWidth="8"
-                        strokeDasharray={`${(92 / 100) * 339.3} 339.3`}
-                        strokeLinecap="round"
-                      />
-                    </svg>
-                    <div className="absolute text-center">
-                      <div className="text-3xl font-bold text-accent">92%</div>
-                      <div className="text-xs text-foreground-muted">
-                        Strong Match
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Recommended Jobs */}
-                <div>
-                  <h4 className="font-semibold mb-4 text-sm">
-                    Recommended for you
-                  </h4>
-                  <div className="space-y-3">
-                    {featuredJobs.map((job, index) => (
-                      <div
-                        key={index}
-                        className="p-3 rounded-lg bg-glass-bg border border-border hover:border-primary transition-colors duration-300"
-                      >
-                        <p className="font-semibold text-sm mb-1">
-                          {job.title}
-                        </p>
-                        <p className="text-xs text-foreground-muted mb-2">
-                          📍 {job.location}
-                        </p>
-                        <div className="flex justify-between items-center text-xs">
-                          <span className="px-2 py-1 rounded bg-(--accent)/20 text-accent font-medium">
-                            {job.type}
-                          </span>
-                          <span className="text-accent">
-                            {job.matchScore}% match
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                  <Link
-                    href="/jobs"
-                    className="mt-4 text-accent text-sm font-semibold hover:text-accent-secondary transition-colors inline-flex items-center gap-2"
-                  >
-                    View all jobs
-                    <span>→</span>
-                  </Link>
-                </div>
-
-                {/* Testimonial */}
-                <div className="pt-4 border-t border-border">
-                  <p className="text-foreground-muted italic text-sm mb-3">
-                    &quot;Vectra understood our unique requirements and
-                    delivered exceptional candidates who made an impact from day
-                    one.&quot;
-                  </p>
-                  <p className="text-sm font-semibold">Head of Engineering,</p>
-                  <p className="text-xs text-foreground-muted">
-                    Aerospace Company
-                  </p>
                 </div>
               </div>
             </motion.div>
@@ -250,7 +129,7 @@ export default function Home() {
             {[
               {
                 image:
-                  "https://images.unsplash.com/photo-1606986628253-05620e9b0a80?w=500&h=400&fit=crop",
+                  "https://images.unsplash.com/photo-1446776877081-d282a0f896e2?w=500&h=400&fit=crop",
                 alt: "Optics & Precision Engineering",
               },
               {
@@ -275,6 +154,8 @@ export default function Home() {
                   src={item.image}
                   alt={item.alt}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  width={500}
+                  height={400}
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </motion.div>
