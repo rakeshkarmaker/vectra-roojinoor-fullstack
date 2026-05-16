@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { FooterColumn } from "./footer-column";
-import { SocialButton } from "./social-button";
 import { motion } from "motion/react";
-import { ArrowRight, Linkedin, Twitter, Instagram } from "lucide-react";
+import { ArrowRight } from "lucide-react";
+import { FaLinkedin, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FooterColumn } from "../common/footer-column";
+import { SocialButton } from "../common/social-button";
+import Img from "next/image";
 
 export function Footer() {
   const navigationLinks = [
@@ -33,13 +35,7 @@ export function Footer() {
   return (
     <footer className="relative">
       {/* Main Footer */}
-      <div
-        className="bg-linear-to-b from-[#020817] to-[#031225] border-t border-[rgba(255,255,255,0.08)] pt-24 pb-8 rounded-t-3xl"
-        style={{
-          backgroundImage: `radial-gradient(circle at 20% 50%, rgba(0, 213, 199, 0.05) 0%, transparent 50%)`,
-          backgroundBlendMode: "overlay",
-        }}
-      >
+      <div className="footer-surface pt-24 pb-8 rounded-t-3xl">
         <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
           {/* 4-Column Layout (Desktop) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
@@ -50,25 +46,29 @@ export function Footer() {
               transition={{ duration: 0.5 }}
               className="lg:pr-4"
             >
-              <div className="mb-6">
+              <div className="flex mb-6 items-center justify-between">
+                {/* Logo */}
                 <Link
                   href="/"
-                  className="text-white font-bold text-xl tracking-tight"
+                  className="flex items-center gap-2 group shrink-0"
                 >
-                  <span className="text-[#00d5c7]">V</span>ECTRA
-                  <br />
-                  <span className="text-sm font-light text-[rgba(255,255,255,0.6)]">
-                    AEROSPACE
-                  </span>
+                  <div className="flex items-center gap-1">
+                    <Img
+                      src="/Upscaled_nobg_logo.png"
+                      alt="Vectra Logo"
+                      width={200}
+                      height={50}
+                    />
+                  </div>
                 </Link>
               </div>
-              <p className="text-sm text-[rgba(255,255,255,0.55)] mb-8 leading-relaxed font-light">
+              <p className="text-sm text-on-dark-muted mb-8 leading-relaxed font-light">
                 Specialist engineering recruitment for aerospace, optics,
                 photonics, advanced engineering and emerging technologies.
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#00d5c7] to-[#00b8d4] text-black font-semibold rounded-xl hover:shadow-[0_0_20px_rgba(0,213,199,0.5)] transition-all duration-300 group text-sm"
+                className="inline-flex items-center gap-2 px-5 py-2.5 brand-gradient text-primary-foreground font-semibold rounded-xl brand-glow-button transition-all duration-300 group text-sm"
               >
                 Upload CV
                 <ArrowRight
@@ -90,35 +90,35 @@ export function Footer() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <h3 className="text-sm font-semibold text-white mb-6 tracking-wide">
+              <h3 className="text-sm font-semibold text-foreground mb-6 tracking-wide">
                 Contact
               </h3>
               <div className="space-y-3 mb-10">
                 {contactInfo.map((info, index) => (
                   <p
                     key={index}
-                    className="text-sm text-[rgba(255,255,255,0.55)] font-light"
+                    className="text-sm text-on-dark-muted font-light"
                   >
                     {info.label}
                   </p>
                 ))}
               </div>
-              <h4 className="text-xs font-semibold text-white mb-4 tracking-widest opacity-70">
+              <h4 className="text-xs font-semibold text-foreground mb-4 tracking-widest opacity-70">
                 FOLLOW
               </h4>
               <div className="flex gap-3">
                 <SocialButton
-                  icon={Linkedin}
+                  icon={FaLinkedin}
                   href="https://linkedin.com/company/vectra-aerospace"
                   label="LinkedIn"
                 />
                 <SocialButton
-                  icon={Twitter}
+                  icon={FaTwitter}
                   href="https://twitter.com/vectraaero"
                   label="Twitter"
                 />
                 <SocialButton
-                  icon={Instagram}
+                  icon={FaInstagram}
                   href="https://instagram.com/vectraaerospace"
                   label="Instagram"
                 />
@@ -127,7 +127,7 @@ export function Footer() {
           </div>
 
           {/* Divider */}
-          <div className="h-px bg-gradient-to-r from-transparent via-[rgba(255,255,255,0.12)] to-transparent" />
+          <div className="h-px footer-divider" />
 
           {/* Copyright Bar */}
           <motion.div
@@ -136,25 +136,25 @@ export function Footer() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8"
           >
-            <p className="text-xs text-[rgba(255,255,255,0.45)] font-light">
+            <p className="text-xs text-on-dark-soft font-light">
               © 2026 Vectra Aerospace. All rights reserved.
             </p>
             <div className="flex gap-8">
               <Link
                 href="/"
-                className="text-xs text-[rgba(255,255,255,0.45)] hover:text-[#00d5c7] transition-colors duration-300 font-light"
+                className="text-xs text-on-dark-soft hover:text-primary transition-colors duration-300 font-light"
               >
                 Privacy Policy
               </Link>
               <Link
                 href="/"
-                className="text-xs text-[rgba(255,255,255,0.45)] hover:text-[#00d5c7] transition-colors duration-300 font-light"
+                className="text-xs text-on-dark-soft hover:text-primary transition-colors duration-300 font-light"
               >
                 Terms
               </Link>
               <Link
                 href="/"
-                className="text-xs text-[rgba(255,255,255,0.45)] hover:text-[#00d5c7] transition-colors duration-300 font-light"
+                className="text-xs text-on-dark-soft hover:text-primary transition-colors duration-300 font-light"
               >
                 Cookies
               </Link>
