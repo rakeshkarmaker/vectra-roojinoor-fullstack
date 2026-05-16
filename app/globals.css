@@ -12,6 +12,11 @@
   /* Brand */
   --primary: oklch(0.78 0.14 190);
   --primary-foreground: oklch(0.12 0 0);
+  --brand-start: #00d5c7;
+  --brand-end: #00b8d4;
+  --brand-border: rgba(0, 213, 199, 0.2);
+  --brand-glow: rgba(0, 213, 199, 0.4);
+  --brand-glow-strong: rgba(0, 213, 199, 0.5);
 
   /* Secondary surfaces */
   --secondary: oklch(0.96 0.01 190);
@@ -53,6 +58,13 @@
   /* Glassmorphism */
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.08);
+  --surface-deep-start: #020817;
+  --surface-deep-end: #031225;
+  --surface-divider: rgba(255, 255, 255, 0.12);
+  --text-on-dark-strong: rgba(255, 255, 255, 0.7);
+  --text-on-dark-subtle: rgba(255, 255, 255, 0.6);
+  --text-on-dark-muted: rgba(255, 255, 255, 0.55);
+  --text-on-dark-soft: rgba(255, 255, 255, 0.45);
 
   /* Neon */
   --neon-border: rgba(0, 213, 199, 0.2);
@@ -60,6 +72,7 @@
 
   /* Navbar */
   --navbar-bg: rgba(7, 16, 31, 0.72);
+  --navbar-shadow: rgba(0, 0, 0, 0.3);
 
   /* Sidebar */
   --sidebar: oklch(0.985 0 0);
@@ -159,6 +172,12 @@
   --color-chart-5: var(--chart-5);
 
   /* Custom */
+  --color-brand-start: var(--brand-start);
+  --color-brand-end: var(--brand-end);
+
+  --color-surface-deep-start: var(--surface-deep-start);
+  --color-surface-deep-end: var(--surface-deep-end);
+
   --color-glass-bg: var(--glass-bg);
   --color-glass-border: var(--glass-border);
 
@@ -215,6 +234,46 @@
     border: 1px solid var(--glass-border);
   }
 
+  .footer-surface {
+    background-image: linear-gradient(
+        to bottom,
+        var(--surface-deep-start),
+        var(--surface-deep-end)
+      ),
+      radial-gradient(
+        circle at 20% 50%,
+        rgba(0, 213, 199, 0.05) 0%,
+        transparent 50%
+      );
+    background-blend-mode: overlay;
+    border-top: 1px solid var(--glass-border);
+  }
+
+  .footer-divider {
+    background: linear-gradient(
+      to right,
+      transparent,
+      var(--surface-divider),
+      transparent
+    );
+  }
+
+  .text-on-dark-strong {
+    color: var(--text-on-dark-strong);
+  }
+
+  .text-on-dark-subtle {
+    color: var(--text-on-dark-subtle);
+  }
+
+  .text-on-dark-muted {
+    color: var(--text-on-dark-muted);
+  }
+
+  .text-on-dark-soft {
+    color: var(--text-on-dark-soft);
+  }
+
   .neon-border {
     border: 1px solid var(--neon-border);
   }
@@ -224,8 +283,31 @@
   }
 
   .brand-gradient {
-    background: linear-gradient(to right,
-        oklch(0.78 0.14 190),
-        oklch(0.72 0.12 220));
+    background: linear-gradient(to right, var(--brand-start), var(--brand-end));
+  }
+
+  .brand-glow-button {
+    transition: box-shadow 0.3s ease;
+  }
+
+  .brand-glow-button:hover {
+    box-shadow: 0 0 20px var(--brand-glow-strong);
+  }
+
+  .brand-icon-button {
+    background: var(--glass-bg);
+    backdrop-filter: blur(8px);
+    border: 1px solid var(--brand-border);
+    color: var(--primary);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .brand-icon-button:hover {
+    box-shadow: 0 0 20px var(--brand-glow);
+  }
+
+  .nav-shadow {
+    box-shadow: 0 8px 32px var(--navbar-shadow);
   }
 }
