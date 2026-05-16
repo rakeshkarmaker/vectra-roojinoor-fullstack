@@ -1,26 +1,231 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* =========================================
+   THEME TOKENS
+========================================= */
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Brand */
+  --primary: oklch(0.78 0.14 190);
+  --primary-foreground: oklch(0.12 0 0);
+
+  /* Secondary surfaces */
+  --secondary: oklch(0.96 0.01 190);
+  --secondary-foreground: oklch(0.2 0 0);
+
+  /* Interactive states */
+  --accent: oklch(0.92 0.03 190);
+  --accent-foreground: oklch(0.2 0 0);
+
+  /* Base */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+
+  /* Cards */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+
+  /* Popover */
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+
+  /* Muted */
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+
+  /* Borders */
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+
+  /* Focus */
+  --ring: oklch(0.78 0.14 190);
+
+  /* Destructive */
+  --destructive: oklch(0.577 0.245 27.325);
+
+  /* Radius */
+  --radius: 0.75rem;
+
+  /* Glassmorphism */
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  /* Neon */
+  --neon-border: rgba(0, 213, 199, 0.2);
+  --neon-glow: rgba(0, 213, 199, 0.4);
+
+  /* Navbar */
+  --navbar-bg: rgba(7, 16, 31, 0.72);
+
+  /* Sidebar */
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+
+  /* Charts */
+  --chart-1: oklch(0.78 0.14 190);
+  --chart-2: oklch(0.68 0.1 220);
+  --chart-3: oklch(0.58 0.08 250);
+  --chart-4: oklch(0.48 0.06 280);
+  --chart-5: oklch(0.38 0.04 310);
 }
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+.dark {
+  --background: oklch(0.11 0 0);
+  --foreground: oklch(0.985 0 0);
+
+  --card: oklch(0.15 0 0);
+  --card-foreground: oklch(0.985 0 0);
+
+  --popover: oklch(0.15 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+
+  --primary: oklch(0.78 0.14 190);
+  --primary-foreground: oklch(0.1 0 0);
+
+  --secondary: oklch(0.22 0.02 220);
+  --secondary-foreground: oklch(0.96 0 0);
+
+  --accent: oklch(0.28 0.03 190);
+  --accent-foreground: oklch(0.98 0 0);
+
+  --muted: oklch(0.22 0 0);
+  --muted-foreground: oklch(0.7 0 0);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 14%);
+
+  --ring: oklch(0.72 0.12 190);
+
+  --destructive: oklch(0.65 0.22 25);
+
+  --sidebar: oklch(0.16 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+}
+
+/* =========================================
+   TAILWIND TOKEN EXPOSURE
+========================================= */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+  /* Fonts */
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Core */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-destructive: var(--destructive);
+
+  /* Sidebar */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+
+  /* Charts */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Custom */
+  --color-glass-bg: var(--glass-bg);
+  --color-glass-border: var(--glass-border);
+
+  --color-navbar-bg: var(--navbar-bg);
+
+  --color-neon-border: var(--neon-border);
+  --color-neon-glow: var(--neon-glow);
+
+  /* Radius */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* =========================================
+   BASE
+========================================= */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply font-sans;
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* =========================================
+   COMPONENT UTILITIES
+========================================= */
+
+@layer components {
+  .glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .glass-navbar {
+    background: var(--navbar-bg);
+    backdrop-filter: blur(18px);
+    border: 1px solid var(--glass-border);
+  }
+
+  .neon-border {
+    border: 1px solid var(--neon-border);
+  }
+
+  .neon-glow {
+    box-shadow: 0 0 24px var(--neon-glow);
+  }
+
+  .brand-gradient {
+    background: linear-gradient(to right,
+        oklch(0.78 0.14 190),
+        oklch(0.72 0.12 220));
+  }
 }
