@@ -24,7 +24,8 @@
   --secondary-foreground: oklch(0.2 0 0);
 
   /* Interactive states */
-  --accent: oklch(0.92 0.03 190);
+  /* Use hex fallback for broader browser support */
+  --accent: #00d5c7;
   --accent-foreground: oklch(0.2 0 0);
 
   /* Base */
@@ -108,7 +109,7 @@
   --secondary: oklch(0.22 0.02 220);
   --secondary-foreground: oklch(0.96 0 0);
 
-  --accent: oklch(0.28 0.03 190);
+  --accent: #00b8d4;
   --accent-foreground: oklch(0.98 0 0);
 
   --muted: oklch(0.22 0 0);

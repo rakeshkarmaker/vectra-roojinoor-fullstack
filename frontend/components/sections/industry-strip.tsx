@@ -29,7 +29,7 @@ export function IndustryStrip() {
             <div className="text-accent group-hover:scale-110 transition-transform duration-300">
               {item.icon}
             </div>
-            <span className="text-sm font-medium text-center whitespace-nowrap">
+            <span className="text-sm font-medium text-center whitespace-nowrap text-[var(--accent)]">
               {item.label}
             </span>
           </motion.div>
