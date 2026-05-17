@@ -22,14 +22,14 @@ export function Navbar() {
       transition={{ duration: 0.6 }}
       className="fixed top-0 left-0 right-0 z-50 pt-6 px-6 lg:px-8"
     >
-      <nav className="max-w-7xl mx-auto glass-navbar nav-shadow rounded-full px-8 py-1">
+      <nav className="max-w-7xl mx-auto glass-navbar nav-shadow rounded-full px-8 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group shrink-0">
             <div className="flex items-center gap-1">
               <Img
-                src="/Upscaled_nobg_logo.png"
-                alt="Vectra Logo"
+                src="/logo_cropped.png"
+                alt="Vectra Talent Logo"
                 width={200}
                 height={50}
                 className="h-auto"

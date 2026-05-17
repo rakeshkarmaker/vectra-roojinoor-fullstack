@@ -54,7 +54,7 @@ export function Footer() {
                 >
                   <div className="flex items-center gap-1">
                     <Img
-                      src="/Upscaled_nobg_logo.png"
+                      src="/logo_cropped.png"
                       alt=" Vectra Talent Logo"
                       width={200}
                       height={50}
