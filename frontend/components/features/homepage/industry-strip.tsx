@@ -16,8 +16,8 @@ const industries: IndustryItem[] = [
 
 export function IndustryStrip() {
   return (
-    <section className="bg-[#060d18] py-12">
-      <div className="max-w-7xl mx-auto px-6 py-12">
+    <section className="bg-[#060d18] py-4">
+      <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex flex-wrap justify-around items-center gap-8 md:gap-12">
           {industries.map((item, index) => (
             <motion.div
