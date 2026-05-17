@@ -1,24 +1,19 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
+import UploadCvModal from "../ui/upload-cv-modal";
 import { usePathname } from "next/navigation";
 import { motion } from "motion/react";
 import Img from "next/image";
+import MobileDropdown, { NAV_ITEMS } from "./dropdown";
 
 export function Navbar() {
   const pathname = usePathname();
 
   const isActive = (path: string) => pathname === path;
 
-  const navItems = [
-    { label: "Home", href: "/" },
-    { label: "Candidates", href: "/Candidates" },
-    { label: "Companies", href: "/companies" },
-    { label: "Jobs", href: "/jobs" },
-    { label: "Industries", href: "/industries" },
-    { label: "About", href: "/about" },
-    { label: "Contact", href: "/contact" },
-  ];
+  const [open, setOpen] = useState(false);
 
   return (
     <motion.div
@@ -43,7 +38,7 @@ export function Navbar() {
 
           {/* Center Navigation - Hidden on mobile, flex on larger screens */}
           <div className="hidden lg:flex items-center gap-1">
-            {navItems.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
@@ -71,12 +66,14 @@ export function Navbar() {
 
           {/* Right CTA Buttons */}
           <div className="flex items-center gap-3">
-            <Link
-              href="/contact"
+            <MobileDropdown onUploadCv={() => setOpen(true)} />
+            <button
+              onClick={() => setOpen(true)}
               className="hidden sm:inline-block px-6 py-2 text-sm font-semibold text-primary-foreground brand-gradient brand-glow-button rounded-full transition-all duration-300 hover:scale-105"
             >
               Upload CV
-            </Link>
+            </button>
+            <UploadCvModal open={open} onClose={() => setOpen(false)} />
           </div>
         </div>
       </nav>
