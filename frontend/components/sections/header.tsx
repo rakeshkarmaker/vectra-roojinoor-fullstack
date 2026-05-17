@@ -11,7 +11,8 @@ export function Navbar() {
   const isActive = (path: string) => pathname === path;
 
   const navItems = [
-    { label: "Candidates", href: "/" },
+    { label: "Home", href: "/" },
+    { label: "Candidates", href: "/Candidates" },
     { label: "Companies", href: "/companies" },
     { label: "Jobs", href: "/jobs" },
     { label: "Industries", href: "/industries" },
@@ -20,7 +21,12 @@ export function Navbar() {
   ];
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 pt-6 px-6 lg:px-8">
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="fixed top-0 left-0 right-0 z-50 pt-6 px-6 lg:px-8"
+    >
       <nav className="max-w-7xl mx-auto glass-navbar nav-shadow rounded-full px-8 py-1">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -74,6 +80,6 @@ export function Navbar() {
           </div>
         </div>
       </nav>
-    </div>
+    </motion.div>
   );
 }

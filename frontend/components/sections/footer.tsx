@@ -62,7 +62,7 @@ export function Footer() {
                   </div>
                 </Link>
               </div>
-              <p className="text-sm text-on-dark-muted mb-8 leading-relaxed font-light">
+              <p className="text-sm text-on-dark mb-8 leading-relaxed font-light">
                 Specialist engineering recruitment for aerospace, optics,
                 photonics, advanced engineering and emerging technologies.
               </p>
