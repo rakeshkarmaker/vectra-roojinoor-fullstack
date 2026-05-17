@@ -35,6 +35,7 @@ export default function AboutPage() {
           src="/About-bg.png"
           alt="About Us"
           fill
+          sizes="100vw"
           priority
           className="object-cover"
         />

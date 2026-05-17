@@ -28,7 +28,7 @@ export function Footer() {
 
   const contactInfo = [
     { label: "London, UK", type: "location" },
-    { label: "hello@vectraaerospace.com", type: "email" },
+    { label: "contact@vectratalent.com", type: "email" },
     { label: "+44 20 1234 5678", type: "phone" },
   ];
 
@@ -55,9 +55,10 @@ export function Footer() {
                   <div className="flex items-center gap-1">
                     <Img
                       src="/Upscaled_nobg_logo.png"
-                      alt="Vectra Logo"
+                      alt=" Vectra Talent Logo"
                       width={200}
                       height={50}
+                      className="h-auto"
                     />
                   </div>
                 </Link>
@@ -109,17 +110,17 @@ export function Footer() {
               <div className="flex gap-3">
                 <SocialButton
                   icon={FaLinkedin}
-                  href="https://linkedin.com/company/vectra-aerospace"
+                  href="https://linkedin.com/company/vectra-talent"
                   label="LinkedIn"
                 />
                 <SocialButton
                   icon={FaTwitter}
-                  href="https://twitter.com/vectraaero"
+                  href="https://twitter.com/vectratalent"
                   label="Twitter"
                 />
                 <SocialButton
                   icon={FaInstagram}
-                  href="https://instagram.com/vectraaerospace"
+                  href="https://instagram.com/vectratalent"
                   label="Instagram"
                 />
               </div>
@@ -137,7 +138,7 @@ export function Footer() {
             className="flex flex-col md:flex-row justify-between items-center gap-6 pt-8"
           >
             <p className="text-xs text-on-dark-soft font-light">
-              © 2026 Vectra Aerospace. All rights reserved.
+              © 2026 Vectra Talent. All rights reserved.
             </p>
             <div className="flex gap-8">
               <Link

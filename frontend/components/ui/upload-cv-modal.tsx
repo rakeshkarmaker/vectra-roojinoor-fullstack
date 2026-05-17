@@ -61,7 +61,7 @@ export default function UploadCvModal({ open, onClose }: Props) {
     >
       <DialogContent
         showCloseButton
-        className="w-[calc(100%-2rem)] max-h-[90vh] overflow-y-auto p-0 sm:!max-w-5xl border border-[#1e3b53] bg-[#041226] text-white"
+        className="w-[calc(100%-2rem)] max-h-[90vh] overflow-y-auto p-0 sm:max-w-5xl! border border-[#1e3b53] bg-[#041226] text-white"
       >
         <DialogTitle className="sr-only">Upload CV</DialogTitle>
 
@@ -81,7 +81,7 @@ export default function UploadCvModal({ open, onClose }: Props) {
               </p>
               <p className="flex items-center gap-3">
                 <Mail className="h-4 w-4 text-primary" />
-                hello@vectraaerospace.com
+                hello@vectratalent.com
               </p>
               <p className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 text-primary" />

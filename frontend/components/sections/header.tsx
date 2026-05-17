@@ -32,6 +32,7 @@ export function Navbar() {
                 alt="Vectra Logo"
                 width={200}
                 height={50}
+                className="h-auto"
               />
             </div>
           </Link>

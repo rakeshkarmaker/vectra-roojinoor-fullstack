@@ -53,6 +53,7 @@ export default function IndustriesPage() {
           src="/RaderBG.png"
           alt="Industries"
           fill
+          sizes="100vw"
           className="z-0 object-cover"
           priority
         />

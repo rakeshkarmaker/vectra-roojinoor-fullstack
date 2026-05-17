@@ -49,7 +49,13 @@ export function IndustryCard({
       <div className="relative h-44 sm:h-52 lg:h-48">
         {image ? (
           <>
-            <Image src={image} alt={title} fill className="object-cover" />
+            <Image
+              src={image}
+              alt={title}
+              fill
+              sizes="(max-width: 768px) 100vw, 33vw"
+              className="object-cover"
+            />
             <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent" />
           </>
         ) : (
