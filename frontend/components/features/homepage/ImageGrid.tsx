@@ -64,11 +64,16 @@ export default function ImageGrid() {
               />
 
               {/* Bottom content */}
-              <div className="absolute bottom-0 left-0 right-0 px-4 py-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10">
+              {/* <div className="absolute bottom-0 left-0 right-0 px-4 py-4 bg-linear-to-t from-black/80 via-black/40 to-transparent z-10">
                 <p className="text-white text-sm font-semibold">{card.label}</p>
                 <p className="text-white/60 text-xs mt-1">{card.detail}</p>
-              </div>
+              </div> */}
+              {/* Sliding content */}
+              <div className="absolute left-0 right-0 bottom-0 z-20 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out px-4 py-4 bg-black/80 backdrop-blur-sm">
+                <p className="text-white text-sm font-semibold">{card.label}</p>
 
+                <p className="text-white/60 text-xs mt-1">{card.detail}</p>
+              </div>
               {/* Hover glow */}
               <div className="absolute inset-0 bg-[#1ec8a0]/0 group-hover:bg-[#1ec8a0]/5 transition-colors duration-300 z-10" />
             </motion.div>
