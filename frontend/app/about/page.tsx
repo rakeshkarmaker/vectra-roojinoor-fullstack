@@ -32,15 +32,15 @@ export default function AboutPage() {
       <section className="relative isolate overflow-hidden rounded-b-3xl pt-28 pb-5">
         {/* Background Image */}
         <Image
-          src="/RaderBG.png"
-          alt="Industries"
+          src="/About-bg.png"
+          alt="About Us"
           fill
           priority
           className="object-cover"
         />
 
         {/* Optional dark overlay */}
-        <div className="absolute inset-0 bg-black/40 z-10" />
+        <div className="absolute inset-0 bg-black/60 z-10" />
 
         {/* Content */}
         <div className="relative z-20 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 lg:py-28 flex items-center">

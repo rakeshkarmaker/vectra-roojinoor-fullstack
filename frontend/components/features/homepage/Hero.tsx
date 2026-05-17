@@ -45,6 +45,7 @@ export default function Hero() {
 
           <div className="flex items-center gap-4 flex-wrap">
             <Button
+              onClick={() => setOpen(true)}
               size="lg"
               className="bg-[#1ec8a0] text-[#060d18] font-semibold hover:bg-[#17b08c] flex items-center gap-2 h-12 px-7 text-sm"
             >
@@ -54,7 +55,6 @@ export default function Hero() {
             <UploadCvModal open={open} onClose={() => setOpen(false)} />
 
             <Button
-              onClick={() => setOpen(true)}
               size="lg"
               variant="outline"
               className="border border-white/40 text-white bg-transparent hover:bg-white/5 flex items-center gap-2 h-12 px-7 text-sm"
