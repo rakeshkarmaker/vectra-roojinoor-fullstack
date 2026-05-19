@@ -49,10 +49,10 @@ export function IndustryCard({
         backgroundColor="#120F17"
         borderRadius={28}
         glowRadius={28}
-        glowIntensity={1.5}
-        coneSpread={25}
+        glowIntensity={1.2}
+        coneSpread={20}
         animated
-        colors={["#00d5c7", "#00b8d4", "#00d5c7"]}
+        colors={["#00d5c7", "#00b8d4"]}
       >
         <motion.article
           initial={{ opacity: 0, scale: 0.98 }}
