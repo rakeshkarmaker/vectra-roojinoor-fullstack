@@ -102,6 +102,7 @@ export default function MobileDropdown({ onUploadCv }: MobileDropdownProps) {
               return (
                 <SheetClose
                   key={item.label}
+                  nativeButton={"href" in item ? false : true}
                   render={
                     "href" in item ? (
                       <Link
