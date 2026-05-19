@@ -12,22 +12,25 @@ export default function Hero() {
     <section className="relative min-h-135 flex items-start overflow-hidden pt-28 lg:pt-32">
       {/* Dark space background with subtle gradient */}
       <div className="absolute inset-0 z-0 bg-linear-to-br from-[#060d18] via-[#080f1e] to-[#06111f]" />
+      {/* Media Layer */}
+      <div className="absolute inset-0 z-10">
+        {/* Video */}
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          poster="/homepage/Banner.png"
+          className="absolute inset-0 z-10 h-full w-full object-cover brightness-[0.35]"
+        >
+          <source src="/homepage/EarthCorner.webm" type="video/webm" />
+          <source src="/homepage/EarthCorner.mp4" type="video/mp4" />
+        </video>
 
-      {/* Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        preload="auto"
-        poster="/homepage/Banner.png"
-        className="absolute inset-0 z-10 h-full w-full object-cover"
-      >
-        <source src="/homepage/EarthCorner.mp4" type="video/mp4" />
-      </video>
-
-      {/* Overlay */}
-      <div className="absolute inset-0 z-20 bg-black/80 pointer-events-none" />
+        {/* Overlay */}
+        {/* <div className="absolute inset-0 bg-black/70 pointer-events-none" /> */}
+      </div>
 
       {/* Content */}
       <div className="relative z-30 mx-auto w-full max-w-7xl px-6 lg:px-8">
