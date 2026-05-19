@@ -15,6 +15,7 @@ export default function Hero() {
       {/* Media Layer */}
       <div className="absolute inset-0 z-10">
         {/* Video */}
+        {/* Overlay appears late always, instead of overlay, Directly reduced the video brightness to acheieve the same output. less rendering and less loading issues now. */}
         <video
           autoPlay
           muted
