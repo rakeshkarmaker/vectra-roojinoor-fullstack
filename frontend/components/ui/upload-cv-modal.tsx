@@ -61,12 +61,12 @@ export default function UploadCvModal({ open, onClose }: Props) {
     >
       <DialogContent
         showCloseButton
-        className="w-[calc(100%-2rem)] max-h-[90vh] overflow-y-auto p-0 sm:max-w-5xl! border border-[#1e3b53] bg-[#041226] text-white"
+        className="w-[calc(100%-2rem)] max-h-[90vh] overflow-y-auto p-0 sm:max-w-5xl! border border-border bg-card text-foreground"
       >
         <DialogTitle className="sr-only">Upload CV</DialogTitle>
 
         <div className="grid grid-cols-1 md:grid-cols-[0.82fr_1.18fr]">
-          <div className="p-8 md:p-10 text-white bg-[#031224] border-r border-[#1a3348]">
+          <div className="p-8 md:p-10 text-white bg-surface-deep-start border-r border-border">
             <h3 className="text-[48px] leading-[1.02] font-semibold tracking-tight mb-6">
               Let&apos;s Build the Future Together
             </h3>
@@ -100,7 +100,7 @@ export default function UploadCvModal({ open, onClose }: Props) {
               <label className="text-[15px] text-on-dark-subtle">
                 I am a...
               </label>
-              <select className="h-11 rounded-md border border-[#23425a] bg-[#06182a] px-3 py-2 text-[15px] text-white">
+              <select className="h-11 rounded-md border border-border bg-background px-3 py-2 text-[15px] text-foreground">
                 <option>Select an option</option>
                 <option>Candidate</option>
                 <option>Company</option>
@@ -111,13 +111,13 @@ export default function UploadCvModal({ open, onClose }: Props) {
                   value={name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Your Name"
-                  className="h-11 rounded-md border border-[#23425a] bg-[#06182a] px-3 py-2 text-[15px] text-white placeholder:text-on-dark-soft"
+                  className="h-11 rounded-md border border-border bg-background px-3 py-2 text-[15px] text-foreground placeholder:text-on-dark-soft"
                 />
                 <input
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="Your Email"
-                  className="h-11 rounded-md border border-[#23425a] bg-[#06182a] px-3 py-2 text-[15px] text-white placeholder:text-on-dark-soft"
+                  className="h-11 rounded-md border border-border bg-background px-3 py-2 text-[15px] text-foreground placeholder:text-on-dark-soft"
                 />
               </div>
 
@@ -125,14 +125,14 @@ export default function UploadCvModal({ open, onClose }: Props) {
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
                 placeholder="Subject"
-                className="h-11 rounded-md border border-[#23425a] bg-[#06182a] px-3 py-2 text-[15px] text-white placeholder:text-on-dark-soft"
+                className="h-11 rounded-md border border-border bg-background px-3 py-2 text-[15px] text-foreground placeholder:text-on-dark-soft"
               />
 
               <textarea
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Your Message"
-                className="h-28 rounded-md border border-[#23425a] bg-[#06182a] px-3 py-2 text-[15px] text-white placeholder:text-on-dark-soft"
+                className="h-28 rounded-md border border-border bg-background px-3 py-2 text-[15px] text-foreground placeholder:text-on-dark-soft"
               />
 
               <p className="text-[15px] text-on-dark-subtle -mb-1">
