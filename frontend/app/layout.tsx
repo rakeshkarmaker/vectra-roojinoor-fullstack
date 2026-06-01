@@ -1,16 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/sections/header";
 import { Footer } from "@/components/sections/footer";
 
-export const geistSans = Geist({
-  variable: "--font-geist-sans",
+export const fontDisplay = Outfit({
+  variable: "--font-display",
   subsets: ["latin"],
 });
 
-export const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+export const fontSans = Plus_Jakarta_Sans({
+  variable: "--font-sans",
   subsets: ["latin"],
 });
 
@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${fontSans.variable} ${fontDisplay.variable} font-sans`}>
         <Navbar />
         <div className="flex flex-col min-h-screen">
           <main className="flex-1">{children}</main>
