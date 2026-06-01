@@ -4,6 +4,7 @@ import { IndustryStrip } from "@/components/features/homepage/industry-strip";
 import { motion } from "motion/react";
 import Hero from "@/components/features/homepage/Hero";
 import ImageGrid from "@/components/features/homepage/ImageGrid";
+import TargetAudienceSection from "@/components/features/homepage/TargetAudienceSection";
 
 export default function Home() {
   return (
@@ -28,6 +29,9 @@ export default function Home() {
       >
         <FeaturesSection />
       </motion.div>
+
+      {/* Target Audience Section (Candidates / Companies) */}
+      <TargetAudienceSection />
 
       {/* Image Grid Section */}
       <motion.div

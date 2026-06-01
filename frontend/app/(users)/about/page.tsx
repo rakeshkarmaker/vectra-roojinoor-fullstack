@@ -44,7 +44,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 bg-black/60 z-10" />
 
         {/* Content */}
-        <div className="relative z-20 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-20 lg:py-28 flex items-center">
+        <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28 flex items-center">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center w-full">
             <div>
               <h1 className="text-5xl sm:text-6xl font-extrabold leading-tight mb-6 text-white">
@@ -63,7 +63,7 @@ export default function AboutPage() {
       </section>
 
       {/* Who We Are */}
-      <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-12">
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           <div>
             <h2 className="text-2xl font-semibold mb-4">Who We Are</h2>
@@ -91,7 +91,7 @@ export default function AboutPage() {
       </section>
 
       {/* Feature panel */}
-      <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-6 mb-20">
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 py-6 mb-20">
         <div className="rounded-2xl border border-on-dark-700 p-6 bg-on-dark-900/40">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {features.map((f, i) => (

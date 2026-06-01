@@ -1,4 +1,5 @@
-import { IndustryCard } from "../../components/features/industries/industry-card";
+
+import { IndustryCard } from "@/components/features/industries/industry-card";
 import Image from "next/image";
 // Icons are resolved client-side by name to avoid passing non-plain objects
 
@@ -58,7 +59,7 @@ export default function IndustriesPage() {
           priority
         />
         <div className="absolute inset-0 z-10 bg-black/70" />
-        <div className="relative z-20 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 lg:py-28">
+        <div className="relative z-20 max-w-7xl mx-auto px-6 lg:px-8 py-16 lg:py-28">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <h1 className="text-5xl sm:text-6xl font-extrabold leading-tight mb-6">
@@ -76,7 +77,7 @@ export default function IndustriesPage() {
       </section>
 
       {/* Cards grid */}
-      <section className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 mt-16 mb-24">
+      <section className="max-w-7xl mx-auto px-6 lg:px-8 mt-16 mb-24">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {items.map((it) => (
             <IndustryCard
