@@ -46,11 +46,10 @@ export function Navbar() {
                 className="relative group px-4 py-2"
               >
                 <span
-                  className={`text-sm transition-colors duration-300 ${
-                    isActive(item.href)
-                      ? "text-primary font-medium"
-                      : "text-on-dark-strong group-hover:text-primary"
-                  }`}
+                  className={`text-sm transition-colors duration-300 ${isActive(item.href)
+                    ? "text-primary font-medium"
+                    : "text-on-dark-strong group-hover:text-primary"
+                    }`}
                 >
                   {item.label}
                 </span>
