@@ -58,7 +58,7 @@ export function Footer() {
                       alt=" Vectra Talent Logo"
                       width={200}
                       height={50}
-                      className="h-auto"
+                      className="h-auto w-auto"
                     />
                   </div>
                 </Link>

@@ -21,6 +21,7 @@ export function CompaniesHero() {
           src="/images/companies_bg.png" 
           alt="Futuristic buildings" 
           fill 
+          sizes="(max-width: 1024px) 100vw, 75vw"
           className="object-cover object-right mix-blend-lighten opacity-80"
           priority
         />

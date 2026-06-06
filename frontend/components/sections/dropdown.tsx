@@ -113,6 +113,7 @@ export default function MobileDropdown({ onUploadCv }: MobileDropdownProps) {
                     ) : (
                       <button
                         type="button"
+                        aria-label={item.label}
                         className={getItemClassName(false)}
                         onClick={handleUploadCvSelect}
                       />
