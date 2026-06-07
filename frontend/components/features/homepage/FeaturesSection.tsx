@@ -11,7 +11,8 @@ const features = [
         height="28"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#1ec8a0"
+        stroke="currentColor"
+        className="text-primary"
         strokeWidth="1.5"
       >
         <circle cx="9" cy="7" r="4" />
@@ -32,7 +33,8 @@ const features = [
         height="28"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#1ec8a0"
+        stroke="currentColor"
+        className="text-primary"
         strokeWidth="1.5"
       >
         <circle cx="8" cy="8" r="3" />
@@ -52,7 +54,8 @@ const features = [
         height="28"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#1ec8a0"
+        stroke="currentColor"
+        className="text-primary"
         strokeWidth="1.5"
       >
         <polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2" />
@@ -63,20 +66,20 @@ const features = [
 
 export default function FeaturesSection() {
   return (
-    <section className="bg-[#060d18] py-16 px-4">
-      <div className="max-w-6xl mx-auto">
+    <section className="bg-background py-20 px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
         {/* Section header */}
-        <p className="text-center text-2xl font-semibold tracking-[0.2em] text-white/80 mb-10 uppercase">
-          <span className="text-[#1ec8a0]">AI</span>-POWERED MATCHING. HUMAN-LED
+        <p className="text-center text-2xl font-semibold tracking-[0.2em] text-foreground-soft mb-10 uppercase">
+          <span className="text-primary">AI</span>-POWERED MATCHING. HUMAN-LED
           RECRUITMENT.
         </p>
 
         {/* Feature cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {features.map((f) => (
             <div
               key={f.title}
-              className="feature-card p-6 flex flex-col gap-4 rounded-lg border border-[#1a2f45] bg-[#0d1828] hover:border-[#1ec8a0]/40 transition-colors"
+              className="feature-card p-6 flex flex-col gap-4 rounded-lg border border-border bg-card hover:border-primary/40 transition-colors"
             >
               <div className="flex items-start gap-4">
                 <div className="shrink-0 mt-0.5">{f.icon}</div>

@@ -10,9 +10,9 @@ import Img from "next/image";
 
 export function Footer() {
   const navigationLinks = [
-    { label: "Candidates", href: "/" },
-    { label: "Companies", href: "/" },
-    { label: "Jobs", href: "/" },
+    { label: "Candidates", href: "/candidates" },
+    { label: "Companies", href: "/companies" },
+    { label: "Jobs", href: "/jobs" },
     { label: "Industries", href: "/industries" },
     { label: "About", href: "/about" },
     { label: "Contact", href: "/contact" },
@@ -36,7 +36,7 @@ export function Footer() {
     <footer className="relative">
       {/* Main Footer */}
       <div className="footer-surface pt-24 pb-8 rounded-t-3xl">
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
           {/* 4-Column Layout (Desktop) */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-20">
             {/* Column 1: Brand */}
@@ -58,7 +58,8 @@ export function Footer() {
                       alt=" Vectra Talent Logo"
                       width={200}
                       height={50}
-                      className="h-auto"
+                      className="h-auto w-auto"
+                      style={{ width: "auto", height: "auto" }}
                     />
                   </div>
                 </Link>

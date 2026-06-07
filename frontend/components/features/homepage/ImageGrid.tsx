@@ -29,16 +29,16 @@ const imageCards = [
 
 export default function ImageGrid() {
   return (
-    <section className="px-4 pb-0">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+    <section className="pb-0">
+      <div className="w-full">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
           {imageCards.map((card, index) => (
             <motion.div
               key={card.label}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`relative rounded-lg overflow-hidden h-52 group cursor-pointer border border-[#1a2f45] hover:border-[#1ec8a0]/30 transition-all`}
+              className={`relative rounded-lg overflow-hidden h-52 group cursor-pointer border border-border/50 hover:border-primary/40 transition-all`}
             >
               {/* Background Image */}
               <Img
@@ -76,7 +76,7 @@ export default function ImageGrid() {
                 <p className="text-white/60 text-xs mt-1">{card.detail}</p>
               </div>
               {/* Hover glow */}
-              <div className="absolute inset-0 bg-[#1ec8a0]/0 group-hover:bg-[#1ec8a0]/5 transition-colors duration-300 z-10" />
+              <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/5 transition-colors duration-300 z-10" />
             </motion.div>
           ))}
         </div>

@@ -22,7 +22,7 @@ export type NavItem = {
 
 export const NAV_ITEMS: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Candidates", href: "/Candidates" },
+  { label: "Candidates", href: "/candidates" },
   { label: "Companies", href: "/companies" },
   { label: "Jobs", href: "/jobs" },
   { label: "Industries", href: "/industries" },
@@ -113,6 +113,7 @@ export default function MobileDropdown({ onUploadCv }: MobileDropdownProps) {
                     ) : (
                       <button
                         type="button"
+                        aria-label={item.label}
                         className={getItemClassName(false)}
                         onClick={handleUploadCvSelect}
                       />
