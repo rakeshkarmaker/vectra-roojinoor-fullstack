@@ -27,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
-      <body className={`${fontSans.variable} ${fontDisplay.variable} font-sans`}>
+      <body className={`${fontSans.variable} ${fontDisplay.variable} font-sans`} suppressHydrationWarning>
         <Navbar />
         <div className="flex flex-col min-h-screen">
           <main className="flex-1">{children}</main>

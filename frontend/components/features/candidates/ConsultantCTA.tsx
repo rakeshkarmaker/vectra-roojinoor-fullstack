@@ -12,6 +12,7 @@ export function ConsultantCTA() {
           src="/images/consultants_cutout.png"
           alt="Consultants discussing"
           fill
+          sizes="(max-width: 768px) 192px, 288px"
           className="object-contain object-bottom"
         />
       </div>
