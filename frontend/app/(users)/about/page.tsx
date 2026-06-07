@@ -144,23 +144,23 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[200px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-fr">
             {features.map((f, i) => (
               <Card
                 key={i}
-                className={`p-8 flex flex-col ${f.colSpan} ${f.rowSpan} ${f.style} hover:border-primary/50 transition-all duration-300 group`}
+                className={`p-6 flex flex-col ${f.colSpan} ${f.rowSpan} ${f.style} hover:border-primary/50 transition-all duration-300 group`}
               >
                 {/* Decorative element for the tall card */}
                 {f.rowSpan === "md:row-span-2" && (
                   <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-[50px] pointer-events-none group-hover:bg-primary/30 transition-colors" />
                 )}
 
-                <div className={`w-12 h-12 rounded-xl bg-background/50 border border-border flex items-center justify-center mb-6 shrink-0 group-hover:scale-110 transition-transform ${f.rowSpan === "md:row-span-2" ? "bg-primary/20 border-primary/30" : ""}`}>
-                  <f.icon className={`w-6 h-6 ${f.iconColor}`} />
+                <div className={`w-10 h-10 rounded-xl bg-background/50 border border-border flex items-center justify-center mb-4 shrink-0 group-hover:scale-110 transition-transform ${f.rowSpan === "md:row-span-2" ? "bg-primary/20 border-primary/30" : ""}`}>
+                  <f.icon className={`w-5 h-5 ${f.iconColor}`} />
                 </div>
 
-                <h3 className="text-xl font-bold mb-3">{f.title}</h3>
-                <p className="text-foreground-soft leading-relaxed text-sm sm:text-base">
+                <h3 className="text-lg font-bold mb-2">{f.title}</h3>
+                <p className="text-foreground-soft text-sm">
                   {f.description}
                 </p>
               </Card>
