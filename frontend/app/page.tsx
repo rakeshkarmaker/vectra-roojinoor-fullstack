@@ -38,7 +38,7 @@ export default function Home() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.6 }}
-        className="max-w-7xl mx-auto px-6 py-20"
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24"
       >
         <ImageGrid />
       </motion.div>

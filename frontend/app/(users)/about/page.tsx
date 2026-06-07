@@ -49,12 +49,12 @@ export default function AboutPage() {
     <main className="bg-background text-foreground min-h-screen">
 
       {/* Premium Hero Section */}
-      <section className="relative isolate pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden border-b border-border/50">
+      <section className="relative isolate pt-32 pb-16 lg:pt-40 lg:pb-24 overflow-hidden border-b border-border/50">
         {/* Glow Effects */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[500px] bg-primary/10 blur-[120px] rounded-full pointer-events-none" />
         <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-blue-500/10 blur-[100px] rounded-full pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6 border border-primary/20">
               <span className="relative flex h-2 w-2">
@@ -80,7 +80,7 @@ export default function AboutPage() {
 
       {/* Who We Are & Stats */}
       <section className="py-24 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
             <div className="order-2 lg:order-1 space-y-8">
@@ -136,7 +136,7 @@ export default function AboutPage() {
       <section className="py-24 bg-surface-deep-start relative border-y border-border/50">
         <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-5" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold mb-4 tracking-tight">Our Core Values</h2>
             <p className="text-foreground-soft text-lg">
@@ -171,7 +171,7 @@ export default function AboutPage() {
 
       {/* Global Presence Section */}
       <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold mb-12 tracking-tight">Global Presence</h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -203,7 +203,7 @@ export default function AboutPage() {
       </section>
 
       {/* Unified CTA */}
-      <div className="pb-24">
+      <div className="pb-16 lg:pb-24">
         <ConsultantCTA />
       </div>
 

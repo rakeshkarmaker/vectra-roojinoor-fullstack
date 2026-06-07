@@ -9,7 +9,7 @@ export default function Hero() {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="relative min-h-135 flex items-start overflow-hidden pt-28 lg:pt-32">
+    <section className="relative min-h-[35rem] flex items-start overflow-hidden pt-32 lg:pt-40 pb-16 lg:pb-24">
       {/* Dark space background with subtle gradient */}
       <div className="absolute inset-0 z-0 bg-background" />
       {/* Media Layer */}
@@ -34,7 +34,7 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-30 mx-auto w-full max-w-7xl px-6 lg:px-8">
+      <div className="relative z-30 mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <p className="section-label mb-4">Specialist Talent Solutions</p>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">

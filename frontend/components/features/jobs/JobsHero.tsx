@@ -6,7 +6,7 @@ import { Card } from "@/components/ui/card";
 
 export function JobsHero() {
   return (
-    <section className="pt-32 pb-16 w-full flex flex-col items-center text-center relative z-20">
+    <section className="pt-32 lg:pt-40 pb-16 lg:pb-24 w-full flex flex-col items-center text-center relative z-20">
       <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] mb-6 max-w-4xl tracking-tight">
         Explore Elite <br className="md:hidden" /> Engineering Roles
       </h1>
