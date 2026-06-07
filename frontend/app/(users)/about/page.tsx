@@ -203,9 +203,11 @@ export default function AboutPage() {
       </section>
 
       {/* Unified CTA */}
-      <div className="pb-16 lg:pb-24">
-        <ConsultantCTA />
-      </div>
+      <section className="pb-16 lg:pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ConsultantCTA />
+        </div>
+      </section>
 
     </main>
   );
